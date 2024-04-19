@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  /* background-image: url('path/to/your/background/image.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+  color: #333;
+}
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.formData {
+  margin-top: 30px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+.formData h2 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+.formData pre {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+.formDataList {
+  margin-top: 20px;
+}
+
+.formDataList pre {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}

@@ -1,0 +1,33 @@
+/* FormDataDisplay.css */
+.formData {
+    margin-top: 30px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  .formData h2 {
+    color: #007bff;
+    margin-top: 0;
+  }
+  
+  .formData pre {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  
+  .formDataList {
+    margin-top: 20px;
+  }
+  
+  .formDataList pre {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  
