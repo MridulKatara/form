@@ -17,7 +17,7 @@ const FormField = ({ field, onChange, onRemove }) => {
               value={field.data} 
               onChange={(e) => onChange(field.id, e, 'data')} 
             />
-            <button onClick={() => onRemove(field.id)}>✖</button>
+            {/* <button onClick={() => onRemove(field.id)}>✖</button> */}
           </>
         );
       case 'details':
@@ -28,11 +28,12 @@ const FormField = ({ field, onChange, onRemove }) => {
               value={field.data}
               onChange={(e) => onChange(field.id, e, 'data')}
             ></textarea>
-            <button onClick={() => onRemove(field.id)}>✖</button>
+            {/* <button onClick={() => onRemove(field.id)}>✖</button> */}
           </>
         );
       case 'radio':
         return (
+          <>
           <select
             value={field.data}
             onChange={(e) => onChange(field.id, e, 'data')}
@@ -41,6 +42,8 @@ const FormField = ({ field, onChange, onRemove }) => {
             <option value="user">User</option>
             <option value="guest">Guest</option>
           </select>
+          {/* <button onClick={() => onRemove(field.id)}>✖</button> */}
+          </>
         );
       default:
         return null;
@@ -63,6 +66,7 @@ const FormField = ({ field, onChange, onRemove }) => {
         <option value="price">Price</option>
         <option value="radio">Dropdown</option>
       </select>
+      <button className="remove-button" onClick={() => onRemove(field.id)}>✖</button>
     </div>
   );
 };
