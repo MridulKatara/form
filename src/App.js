@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import './App.css';
 import FormField from './FormField';
 import FormDataDisplay from './FormDataDisplay';
-import './FormDataDisplay.css';
-import './FormField.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const [formDataList, setFormDataList] = useState([]);
-  const [inputFields, setInputFields] = useState([{ id: Date.now(), data: '', type: 'text' }]);
+  const [inputFields, setInputFields] = useState([{ 
+    id: uuidv4(), 
+    fieldName: '', 
+    data: '', 
+    type: '' 
+  }]);
 
   const handleChange = (id, event, type) => {
     const updatedFields = inputFields.map(field => 
@@ -17,7 +21,12 @@ function App() {
   };
 
   const handleAddField = () => {
-    setInputFields([...inputFields, { id: Date.now(), data: '', type: 'text' }]);
+    setInputFields([...inputFields, { 
+      id: uuidv4(), 
+      fieldName: '', 
+      data: '', 
+      type: '' 
+    }]);
   };
 
   const handleRemoveField = (id) => {
@@ -30,8 +39,8 @@ function App() {
       switch (field.type) {
         case 'text':
           return true;
-          case 'integer':
-          return /^[0-9]+$/.test(field.data) ;    
+        case 'integer':
+          return /^[0-9]+$/.test(field.data) && field.data.length <= 10;    
         case 'email':
           return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(field.data);
         case 'password':
@@ -60,25 +69,26 @@ function App() {
         case 'text':
           category = 'name';
           break;
-          case 'integer':
-            if (field.data.length === 2 && parseInt(field.data, 10) < 100) {
-              category = 'age';
-              displayData = ` ${field.data}`;
-            } else if (field.data.length === 10) {
-              category = 'mobile';
-              displayData = ` ${field.data}`;
-            } else if (field.data.length > 2 && field.data.length < 10) {
-              category = 'pin';
-              displayData = ` ${field.data}`;
-            } else {
-              category = 'integer';
-            }
-            break;
+        case 'integer':
+          if (field.data.length === 2 && parseInt(field.data, 10) < 100) {
+            category = 'age';
+            displayData = ` ${field.data}`;
+          } else if (field.data.length === 10) {
+            category = 'mobile';
+            displayData = ` ${field.data}`;
+          } else if (field.data.length > 2 && field.data.length < 10) {
+            category = 'pin';
+            displayData = ` ${field.data}`;
+          } else {
+            category = 'integer';
+          }
+          break;
         case 'email':
           category = 'email';
           break;
         case 'password':
           category = 'password';
+          displayData = '*'.repeat(field.data.length);
           break;
         case 'details':
           category = 'details';
@@ -98,12 +108,18 @@ function App() {
 
       return {
         category,
+        fieldName: field.fieldName,
         data: displayData
       };
     });
 
     setFormDataList(prevData => [...prevData, categorizedData]);
-    setInputFields([{ id: Date.now(), data: '', type: 'text' }]);
+    setInputFields([{ 
+      id: uuidv4(), 
+      fieldName: '', 
+      data: '', 
+      type: '' 
+    }]);
   };
 
   return (
