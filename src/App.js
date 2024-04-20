@@ -137,7 +137,7 @@ function App() {
             onRemove={handleRemoveField}
           />
         ))}
-        <button type="button" onClick={handleAddField} className="add-button" style={{ backgroundColor: 'green' }}>+</button>
+        <button type="button" onClick={handleAddField} className="add-button" style={{ backgroundColor: 'green' }}>Add Fields</button>
         <button type="button" onClick={handleSubmit} className="submit-button">Submit</button>
       </form>
       <FormDataDisplay formDataList={formDataList} />

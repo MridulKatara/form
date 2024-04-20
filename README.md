@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Dynamic Form
+
+`Dynamic Form` is a reusable React component for creating customizable forms. It supports various data types such as text, number, date, etc. The component allows users to add new form fields dynamically and perform validation on input fields.
+<img src ="form\public\background\Screenshot (303).png" alt="Form"/>
