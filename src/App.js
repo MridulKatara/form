@@ -36,6 +36,9 @@ function App() {
 
   const handleSubmit = () => {
     const isFormValid = inputFields.every(field => {
+      if (field.data.trim() === '') {
+        return false; 
+      }
       switch (field.type) {
         case 'text':
           return true;

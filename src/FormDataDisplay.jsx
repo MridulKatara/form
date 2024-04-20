@@ -5,7 +5,10 @@ const FormDataDisplay = ({ formDataList }) => {
   return (
     <div className="formData">
       <h2>Submitted Data</h2>
-      {formDataList.map((formData, index) => (
+      {formDataList.length === 0 ? (
+        <p>No data added</p> 
+      ): (
+      formDataList.map((formData, index) => (
         <div key={uuidv4()} className="formDataList">
           <h3>Form {index + 1}</h3>
           <pre>
@@ -23,7 +26,8 @@ const FormDataDisplay = ({ formDataList }) => {
             })}
           </pre>
         </div>
-      ))}
+      ))
+      )}
     </div>
   );
 };
