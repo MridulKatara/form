@@ -72,4 +72,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Dynamic Form
 
 `Dynamic Form` is a reusable React component for creating customizable forms. It supports various data types such as text, number, date, etc. The component allows users to add new form fields dynamically and perform validation on input fields.
-<img src ="form\public\background\Screenshot (303).png" width="900" alt="ScreenShot"/>
+
+
+![Screenshot (303)](https://github.com/MridulKatara/form/assets/142535804/4e5c8252-82d9-41a2-a5ce-ebe9d059fefc)
+![Screenshot (304)](https://github.com/MridulKatara/form/assets/142535804/cb218f0b-919a-4ea3-bcbb-4844f35cab36)
+![Screenshot (305)](https://github.com/MridulKatara/form/assets/142535804/68d27169-4347-49f5-8bb5-e4ecec08980a)
+![Screenshot (306)](https://github.com/MridulKatara/form/assets/142535804/c4262cb4-a2ed-438a-93d1-1c8a0263182f)
+
+
